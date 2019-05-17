@@ -1,0 +1,45 @@
+body{
+    background-color: black;
+    list-style: none;
+    text-decoration: none;
+}
+.clearfix::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.topNavBar a{
+    text-decoration: none;
+}
+.topNavBar nav ul li{
+    float: left;
+    list-style: none;
+}
+.topNavBar nav{
+    float: right;
+}
+.topNavBar nav a{
+    color: #b7b7b7;
+    font-size: 12px;
+    font-weight: bold;
+    border-bottom: 3px solid transparent;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    display: block;
+    margin: 0 17px 0 17px;
+}
+.topNavBar nav a:hover{
+    border-bottom: 3px solid #e06567;
+}
+.topNavBar .logo{
+    font-size: 24px;
+    font-family: 'Arial Black';
+    padding: 3px 0 4px 0;
+}
+.topNavBar .logo .logoRS{
+    color: #e6686a;
+    margin-right: -5px;
+}
+.topNavBar .logo .logocard{
+    color: #9a9da2;
+}
