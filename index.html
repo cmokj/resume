@@ -3,38 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <title>陈敏佳的个人简历</title>
-    <link rel="stylesheet" href="./resume.css">
+    <link rel="stylesheet" href="./main.css">
+    <!-- <link rel="stylesheet" href="./loading.css"> -->
     <script src="//at.alicdn.com/t/font_1198483_jf2dye7bk5.js"></script>
 </head>
 <body>
-    <div class="topNavBar">
+    <div id="siteWelcome" class="siteWelcome active">
+        <div class="loading"></div>
+    </div>
+    <div id="topNavBar" class="topNavBar">
         <div class="topNavBar-inner clearfix">
             <a href="#" class="logo" alt="logo" style="float: left;">
                 <span class="rs">RS</span>
                 <span class="card">card</span>
             </a>
-            <nav style="float: right;">
+            <nav id="mune" style="float: right;">
                 <ul class="clearfix">
                     <li>
-                        <a href="#">关于</a>
+                        <a class="highLight" href="#siteAbout">关于</a>
                     </li>
                     <li>
-                        <a href="#">技能</a>
+                        <a class="highLight" href="#siteSkills">技能</a>
+                    </li>
+                    <li class="menuTigger">
+                        <a  href="#siteWork">作品</a>
+                        <ul class="menuList">
+                            <li>作品1</li>
+                            <li>作品2</li>
+                            <li>作品3</li>
+                        </ul>
                     </li>
                     <li>
-                        <a href="#">作品</a>
+                        <a class="highLight" href="#siteBlog">博客</a>
                     </li>
                     <li>
-                        <a href="#">博客</a>
+                        <a class="highLight" href="#siteCalendar">日历</a>
+                    </li>
+                    <li class="menuTigger">
+                        <a href="#siteContact">联系方式</a>
+                        <ul class="menuList">
+                            <li>联系方式1</li>
+                            <li>联系方式2</li>
+                            <li>联系方式3</li>
+                        </ul>
                     </li>
                     <li>
-                        <a href="#">日历</a>
-                    </li>
-                    <li>
-                        <a href="#">联系方式</a>
-                    </li>
-                    <li>
-                        <a href="#">其他</a>
+                        <a class="highLight" href="#others">其他</a>
                     </li>
                 </ul>
             </nav>
@@ -44,7 +58,7 @@
         <div class="mask"></div>
     </div>
     <main>
-        <div class="userCard">
+        <div data-x id="siteAbout" class="userCard">
             <div class="pictureAndText clearfix">
                 <div class="picture">
                     <img src="img/avatar.jpg" width="299" height="347" alt="头像">
@@ -91,7 +105,7 @@
             陈敏佳，前端开发工程师
         </p>
     </main>
-    <section class="skills">
+    <section data-x id="siteSkills" class="skills">
         <h2>技能</h2>
         <ol class="clearfix"> 
             <li>
@@ -132,7 +146,7 @@
             </li>
         </ol>
     </section>
-    <section class="portfolio">
+    <section data-x id="siteWork" class="portfolio">
         <h2>作品集</h2>
         <nav>
             <ol class="clearfix">
@@ -167,5 +181,81 @@
             }
         </script>
     </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/17.3.5/Tween.min.js"></script>
+    <script> 
+        // setTimeout(function(){
+        //     siteWelcome.classList.remove('active');
+        // },);
+        let div1 = document.querySelectorAll('[data-x]');
+        for(let i=0;i<div1.length;i++) {
+                div1[i].classList.add('offset');
+            }
+        setTimeout(function(){
+            xxx();
+        },100)
+        window.onscroll = function(x){
+            if(scrollY>0) {
+                topNavBar.classList.add('barFloat');
+            }
+            else {
+                topNavBar.classList.remove('barFloat');
+            }
+            xxx();
+        }
+        function xxx() {
+            let div1 = document.querySelectorAll('[data-x]');
+            let minIndex = 0;
+            for(let i=1;i<div1.length;i++) {
+                if( Math.abs(div1[i].offsetTop-window.scrollY) < Math.abs(div1[minIndex].offsetTop-window.scrollY)) {
+                    minIndex = i;
+                }
+                div1[minIndex].classList.remove('offset');
+                let id = div1[minIndex].id;
+                let a = document.querySelector('a[href="#'+id+'"]'); //a[href="#id"]
+                let li = a.parentNode;
+                let allChildren = li.parentNode.children;
+                for(let i =0;i<allChildren.length;i++){
+                    allChildren[i].classList.remove('choosed');
+                }
+                li.classList.add('choosed');
+            }
+        }
+        let a = document.getElementsByClassName('menuTigger');
+        for(let i=0;i<a.length;i++) {
+            a[i].onmouseenter = function(x){
+                x.currentTarget.classList.add('active');
+            }
+            a[i].onmouseleave = function(x) {
+                x.currentTarget.classList.remove('active');
+            }
+        }
+        let aTags = document.querySelectorAll('.topNavBar nav > ul > li > a');
+        function animate(time) {
+            requestAnimationFrame(animate);
+            TWEEN.update(time);
+        }
+        requestAnimationFrame(animate);
+        for(let i=0;i<aTags.length;i++){
+            aTags[i].onclick = function(x){
+                x.preventDefault();
+                let top = document.querySelector(x.currentTarget.getAttribute('href')).offsetTop;
+                let currentTop = window.scrollY;
+                let targetTop = top - 80;        
+                var s = Math.abs(targetTop-currentTop)
+                var t = (s/100)*200;
+                if(t>500) {
+                    t = 500;
+                }
+                var coords = { y: currentTop };
+                var tween = new TWEEN.Tween(coords)
+                    .to({ y: targetTop }, )
+                    .easing(TWEEN.Easing.Quadratic.InOut)
+                    .onUpdate(function() {
+                        window.scrollTo(0,coords.y)
+                    })
+                .start();
+            }
+        }
+    </script>
 </body>
 </html>
