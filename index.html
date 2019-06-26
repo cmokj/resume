@@ -4,7 +4,13 @@
     <meta charset="UTF-8">
     <title>陈敏佳的个人简历</title>
     <link rel="stylesheet" href="./main.css">
-    <!-- <link rel="stylesheet" href="./loading.css"> -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
+
     <script src="//at.alicdn.com/t/font_1198483_jf2dye7bk5.js"></script>
 </head>
 <body>
@@ -146,40 +152,25 @@
             </li>
         </ol>
     </section>
+
     <section data-x id="siteWork" class="portfolio">
-        <h2>作品集</h2>
-        <nav>
-            <ol class="clearfix">
-                <li id="portfolio1">所有</li>
-                <li id="portfolio2">框架</li>
-                <li id="portfolio3">原生JS &amp; CSS</li>
-            </ol>
-            <div id="portfolioBar" class="bar state-1">
-                <div class="bar-inner"></div>
+        <div class="swiper-container">
+            <h2>作品集</h2>
+            <div class="swiper-wrapper works">
+                <img class="swiper-slide" src="./img/work1.jpg" alt="pic">
+                <img class="swiper-slide" src="./img/work2.jpg" alt="pic">
+                <img class="swiper-slide" src="./img/work3.jpg" alt="pic">
             </div>
-        </nav>
-        <div class="works">
-            <div class="big" style="top: 0;left: 0;">
-                <img src="./img/1.jpg" alt="work1">
-            </div>
-            <div class="small" style="top: 0;right: 0;">
-                <img src="./img/2.jpg" alt="work2">
-            </div>
-            <div class="small" style="top: 298px;right: 0;">
-                <img src="./img/3.jpg" alt="work3">
-            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+
+            <!-- If we need scrollbar -->
+            <div class="swiper-scrollbar"></div>
         </div>
-        <script>
-            portfolio1.onclick = function() {
-                portfolioBar.className = 'bar state-1';
-            }
-            portfolio2.onclick = function() {
-                portfolioBar.className = 'bar state-2';
-            }
-            portfolio3.onclick = function() {
-                portfolioBar.className = 'bar state-3';
-            }
-        </script>
     </section>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/17.3.5/Tween.min.js"></script>
     <script> 
@@ -256,6 +247,29 @@
                 .start();
             }
         }
+    </script>
+    <script>
+        var mySwiper = new Swiper ('.swiper-container', {
+            // Optional parameters
+            // direction: 'vertical',
+            // loop: true,
+
+            // If we need pagination
+            pagination: {
+                el: '.swiper-pagination',
+            },
+
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+
+            // And if we need scrollbar
+            scrollbar: {
+                el: '.swiper-scrollbar',
+            },
+        })
     </script>
 </body>
 </html>
