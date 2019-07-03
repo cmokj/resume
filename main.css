@@ -15,17 +15,17 @@ ul, ol { list-style: none; } h1, h2, h3, h4, h5, h6 { font-weight: normal; }
 .topNavBar-inner { padding: 0 16px; }
 .topNavBar nav { padding-top: 7px; }
 .topNavBar nav > ul > li { float: left; margin: 0 17px; list-style: none; position: relative; white-space: nowrap; }
-.topNavBar nav > ul > li > a { font-size: 12px; font-weight: bold; border-bottom: 3px solid transparent; 
+.topNavBar nav > ul > li > a { font-size: 12px; font-weight: bold; border-bottom: 3px solid transparent;
     padding: 5px 0; display: block; position: relative; }
 .topNavBar nav > ul > li.active > a::after,
 .topNavBar nav > ul > li.choosed > a::after,
-.topNavBar nav > ul > li > .highLight:hover::after { content: ""; display:block; position: absolute; height: 3px; width: 100%; background-color: #e06567; 
+.topNavBar nav > ul > li > .highLight:hover::after { content: ""; display:block; position: absolute; height: 3px; width: 100%; background-color: #e06567;
     top: 100%; left: 0; animation: slider 0.3s; }
 @keyframes slider {
     0% { width: 0; }
     100% { width: 100%; }
 }
-.topNavBar li.active > .menuList { display: block; position: absolute; right: 0; background-color: white; 
+.topNavBar li.active > .menuList { display: block; position: absolute; right: 0; background-color: white;
     box-shadow:0px 0px 5px -2px #333333; color: #3D4451; animation: menuListSlider 0.3s; }
 @keyframes menuListSlider {
     0% { margin-right: 100%; }
@@ -38,9 +38,9 @@ ul, ol { list-style: none; } h1, h2, h3, h4, h5, h6 { font-weight: normal; }
 .topNavBar .logo .card { color: #9a9da2; }
 .banner { height: 515px; background-image: url(./img/rs-cover.jpg); background-position: center center; background-size: cover; }
 .banner .mask { height: 515px; background: rgba(0, 0, 0, 0.8); }
-.userCard { max-width: 940px; margin: 0 auto; 
+.userCard { max-width: 940px; margin: 0 auto;
     background: #ffffff; margin-top: -370px; box-shadow:0px 0px 5px -2px #333333; }
-.userCard .welcome { background: #e6686a; color: white; display: 
+.userCard .welcome { background: #e6686a; color: white; display:
     inline-block; padding: 4px 16px; line-height: 22px; position: relative; margin-bottom: 10px; }
 .userCard .welcome .triangle { display: block; border: 10px solid transparent; width: 0; border-left-color: #e6686a; border-top-width: 0; position: absolute; left: 4px; top: 100%; }
 .userCard .picture { float: left; }
@@ -52,32 +52,37 @@ ul, ol { list-style: none; } h1, h2, h3, h4, h5, h6 { font-weight: normal; }
 .userCard dl dt { width: 30%; font-weight: bold; }
 .userCard dl dd{ width: 70%; color: #9da0a7; }
 .userCard > footer.media { background: #e6686a; text-align: center; }
-.userCard > footer.media > a { display: inline-block; width: 40px; 
+.userCard > footer.media > a { display: inline-block; width: 40px;
     line-height: 30px; padding: 5px 0; border-radius: 50%; margin: 16px; }
 .userCard > footer.media > a:hover { background: #cf5d5f; }
 .userCard svg { width: 30px; height: 30px; fill: white; vertical-align: top; }
 .icon { width: 1em; height: 1em; vertical-align: -0.15em; fill: currentColor; overflow: hidden; }
 body > main .downloadResume-wrapper { text-align: center; }
-body > main .downloadResume { font-size: 14px; line-height: 16px; 
-    padding: 21px 55px; display: inline-block; border: 1px solid #cdcfd1; 
+body > main .downloadResume { font-size: 14px; line-height: 16px;
+    padding: 21px 55px; display: inline-block; border: 1px solid #cdcfd1;
     border-radius: 2px; color: #3d4451; font-weight: bold; margin: 32px 0; transition: box-shadow 0.2s; }
 body > main .downloadResume:hover { box-shadow:0px 4px 7px -3px #333333; }
 .selfIntroduction { max-width: 940px; margin: 0 auto; text-align: center; font-family: kai; font-size: 18px; line-height: 1.8; }
-section.skills ol { max-width: 940px; margin: 0 auto; 
+section.skills ol { max-width: 940px; margin: 0 auto;
     padding: 42px 50px 10px; background-color: white; box-shadow:0px 0px 5px -2px #333333; }
 section.portfolio ol { max-width: 940px; margin: 0 auto; }
-section.skills > h2, section.portfolio > h2, .swiper-container > h2 { text-align: center; color: #3d4451;
-    font-size: 34px; line-height: 1.2; font-weight: bold; margin: 60px auto 30px; }
+section.skills > h2,
+section.portfolio > h2,
+.swiper-container > h2,
+section.message > h2 { text-align: center; color: #3d4451; font-size: 34px; line-height: 1.2;
+    font-weight: bold; margin: 60px auto 30px; }
 section.skills > h3 { font-size: 14px; line-height: 1.1; padding-right: 40px; }
 section.skills ol li { float: left; width: 48%; }
 section.skills ol li:nth-child(even) { float: right; }
-section.skills .progressBar { height: 5px; background: #fae1e1; 
+section.skills .progressBar { height: 5px; background: #fae1e1;
     border-radius: 2px; margin: 4px 0 40px; overflow: hidden; }
-section.skills .progress { height: 100%; background-color: #e6686a; 
+section.skills .progress { height: 100%; background-color: #e6686a;
     width: 80%; border-radius: 2px; transform: translateX(0); transition: all 0.8s; }
 section.skills.offset .progress {
     transform: translateX(-100%);
 }
 section.portfolio { max-width: 940px; margin: 0 auto; text-align: center; }
-.swiper-wrapper {  border: 1px solid white; box-shadow:0px 0px 5px -2px #333333; }
-
+.swiper-wrapper {  border: 1px solid white; box-shadow:0px 0px 5px -2px #333333; padding-bottom: 30px;}
+section.message > ol { max-width: 940px; margin:8px auto; border-top: 1px solid #DDD; }
+section.message > ol > li { padding: 16px; border-bottom: 1px solid #DDD; }
+section.message > form { max-width: 940px; margin: 16px auto; }

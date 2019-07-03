@@ -168,9 +168,18 @@
             <div class="swiper-button-prev"></div>
             <div class="swiper-button-next"></div>
 
-            <!-- If we need scrollbar -->
-            <div class="swiper-scrollbar"></div>
         </div>
+    </section>
+    <section class="message">
+        <h2>留言板</h2>
+        <ol id="messageList"></ol>
+        <form action="" id="postMessage">
+            <label for="">用户名</label>
+            <input type="text" name="name">
+            <label for="">留言</label>
+            <input type="text" name="content">
+            <input type="submit" value="提交">
+        </form>
     </section>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/17.3.5/Tween.min.js"></script>
     <script> 
@@ -271,5 +280,7 @@
             },
         })
     </script>
+    <script src="//cdn.jsdelivr.net/npm/leancloud-storage@3.14.0/dist/av-min.js"></script>
+    <script src="./message.js"></script>
 </body>
 </html>
