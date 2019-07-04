@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="98aeb191-be6d-4cbf-9c95-5712a3ddd94d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/work1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/img/work1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/work2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/img/work2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/work3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/img/work3.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/message.js" beforeDir="false" afterPath="$PROJECT_DIR$/message.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -32,8 +27,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/message.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="23" column="18" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="18" />
+            <state relative-caret-position="270">
+              <caret line="18" column="25" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -131,12 +126,12 @@
       <workItem from="1561104765465" duration="435000" />
       <workItem from="1561276779613" duration="1132000" />
       <workItem from="1561430679802" duration="5072000" />
-      <workItem from="1562122498017" duration="7368000" />
+      <workItem from="1562122498017" duration="9653000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14007000" />
+    <option name="totallyTimeSpent" value="16292000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -197,8 +192,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/message.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="18" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="18" />
+        <state relative-caret-position="270">
+          <caret line="18" column="25" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
         </state>
       </provider>
     </entry>
